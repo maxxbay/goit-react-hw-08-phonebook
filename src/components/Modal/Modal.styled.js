@@ -24,7 +24,7 @@ export const ModalWrapper = styled.div`
     padding: 30px;
   }
   @media screen and (min-width: 1440px) {
-    padding: 40px;
+    padding: 50px;
   }
 `;
 
@@ -33,22 +33,29 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--accent-bg-color);
-  margin-bottom: 35px;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+  }
 `;
 
 export const Title = styled.h2`
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 900;
   text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-color: var(--second-bg-color);
   color: var(--second-text-color);
   font-family: inherit;
@@ -58,5 +65,9 @@ export const Button = styled.button`
   :hover,
   :focus {
     background-color: var(--accent-bg-color);
+  }
+  @media screen and (min-width: 768px) {
+    width: 40px;
+    height: 40px;
   }
 `;

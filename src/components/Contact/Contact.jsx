@@ -2,86 +2,60 @@ import PropTypes from 'prop-types';
 import { FaTrash, FaUserEdit } from 'react-icons/fa';
 import {
   Wrapper,
-  StyledLink,
-  ImageWrapper,
-  Photo,
-  PersonalData,
+  NameWrapper,
+  IconUser,
   Name,
   Number,
-  Label,
-  Email,
-  LocalData,
-  City,
-  Company,
-  ButtonWrapper,
+  ButtonList,
+  ButtonItem,
   Button,
 } from './Contact.styled';
-import { useNavigate } from 'react-router-dom';
 import Modal from 'components/Modal';
 import useShowModal from 'hooks/useShowModal';
 import DeletingContact from 'components/DeletingContact';
+import { useNavigate } from 'react-router-dom';
 
-function Contact({ id, name, phone, email, city, company, photo }) {
-  const { showModal, togleModal } = useShowModal(false);
-
+function Contact({ id, name, number }) {
+  const { showModal, toggleModal } = useShowModal(false);
   const navigate = useNavigate();
-  const openEditPage = () => navigate(`/contacts/${id}/edit`);
 
   return (
     <>
       {showModal && (
-        <Modal onClose={togleModal} title={name}>
-          <DeletingContact id={id} name={name} togleModal={togleModal} />
+        <Modal onClose={toggleModal} title={name}>
+          <DeletingContact id={id} name={name} toggleModal={toggleModal} />
         </Modal>
       )}
 
       <Wrapper>
-        <StyledLink to={`/contacts/${id}`}>
-          <ImageWrapper>
-            <Photo src={photo} alt={name} />
-          </ImageWrapper>
-          <PersonalData>
-            <Name>{name}</Name>
-            <Number>
-              <Label>Phone: </Label>
-              {phone}
-            </Number>
-            <Email>
-              <Label>Email: </Label>
-              {email}
-            </Email>
-          </PersonalData>
-          <LocalData>
-            <City>
-              <Label>City: </Label>
-              {city}
-            </City>
-            <Company>
-              <Label>Company: </Label>
-              {company}
-            </Company>
-          </LocalData>
-        </StyledLink>
-        <ButtonWrapper>
-          <Button type="button" onClick={togleModal}>
-            <FaTrash />
-          </Button>
-          <Button type="button" onClick={openEditPage}>
-            <FaUserEdit />
-          </Button>
-        </ButtonWrapper>
+        <NameWrapper>
+          <IconUser />
+          <Name>{name}</Name>
+        </NameWrapper>
+
+        <Number>{number}</Number>
+
+        <ButtonList>
+          <ButtonItem>
+            <Button type="button" onClick={toggleModal}>
+              <FaTrash />
+            </Button>
+          </ButtonItem>
+          <ButtonItem>
+            <Button type="button" onClick={() => navigate(`edit/${id}`)}>
+              <FaUserEdit />
+            </Button>
+          </ButtonItem>
+        </ButtonList>
       </Wrapper>
     </>
   );
 }
 
 Contact.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  city: PropTypes.string,
-  company: PropTypes.string,
-  photo: PropTypes.string,
+  number: PropTypes.string.isRequired,
 };
 
 export default Contact;

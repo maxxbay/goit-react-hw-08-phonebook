@@ -1,118 +1,67 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa';
 
 export const Wrapper = styled.div`
-  margin-bottom: 40px;
-
+  background-color: #fafafa;
+  border-radius: 10px;
+  border: 1px solid #f2f2f2;
+  padding: 10px;
   @media screen and (min-width: 768px) {
-    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 `;
 
-export const StyledLink = styled(Link)`
-  color: var(--main-text-color);
+export const NameWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
-export const ImageWrapper = styled.div`
-  height: 40px;
-  overflow: hidden;
-
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-`;
-
-export const Photo = styled.img`
-  width: 100%;
-`;
-
-export const PersonalData = styled.div`
-  margin-bottom: 15px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 25px;
-  }
-  @media screen and (min-width: 1440px) {
-    margin-bottom: 30px;
-  }
-`;
-
-export const Label = styled.span`
-  color: var(--accent-text-color);
-  font-size: 14px;
-  margin-right: 5px;
+export const IconUser = styled(FaUser)`
+  background-color: var(--accent-bg-color);
+  color: var(--main-bg-color);
+  margin-right: 30px;
+  padding: 10px;
 `;
 
 export const Name = styled.p`
-  font-weight: 600;
   font-size: 18px;
-  text-align: center;
-  background-color: black;
-  color: var(--second-text-color);
-  padding: 15px;
-  margin-bottom: 15px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 25px;
-  }
-  @media screen and (min-width: 1440px) {
-    margin-bottom: 30px;
-  }
+  color: var(--main-text-color);
 `;
 
 export const Number = styled.p`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
+  text-align: center;
 `;
 
-export const Email = styled.p`
+export const ButtonList = styled.ul`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  justify-content: space-evenly;
 `;
 
-export const LocalData = styled.div`
-  margin-bottom: 15px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 25px;
+export const ButtonItem = styled.li`
+  margin-right: 5px;
+  &:last-child {
+    margin-right: 0;
   }
-  @media screen and (min-width: 1440px) {
-    margin-bottom: 30px;
-  }
-`;
-
-export const City = styled.p`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
-`;
-
-export const Company = styled.p`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
 `;
 
 export const Button = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48%;
+  width: 40px;
   height: 30px;
   padding: 10px;
   border: none;
-  background-color: #2b2b2b;
-  color: var(--second-text-color);
+  background-color: transparent;
+  color: var(--accent-bg-color);
   cursor: pointer;
-  transition: background-color var(--main-hover-animation);
+  transition: color var(--main-hover-animation);
   :hover,
   :focus {
-    background-color: var(--accent-bg-color);
+    color: var(--second-bg-color);
   }
 `;
