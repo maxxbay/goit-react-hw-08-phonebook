@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Contact from 'components/Contact/Contact';
 import Loader from 'components/Loader';
 import NotFound from 'components/NotFound';
