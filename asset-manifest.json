@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.e81462ea.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.2ddbe60f.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.54cdb92b.js",
     "static/js/951.ad6463f0.chunk.js": "/goit-react-hw-08-phonebook/static/js/951.ad6463f0.chunk.js",
-    "static/js/718.16081d99.chunk.js": "/goit-react-hw-08-phonebook/static/js/718.16081d99.chunk.js",
+    "static/js/718.e7275d07.chunk.js": "/goit-react-hw-08-phonebook/static/js/718.e7275d07.chunk.js",
     "static/js/250.f2230952.chunk.js": "/goit-react-hw-08-phonebook/static/js/250.f2230952.chunk.js",
     "static/js/593.6858dfe3.chunk.js": "/goit-react-hw-08-phonebook/static/js/593.6858dfe3.chunk.js",
     "static/js/732.3d6d7617.chunk.js": "/goit-react-hw-08-phonebook/static/js/732.3d6d7617.chunk.js",
@@ -12,9 +12,9 @@
     "static/js/269.22e3a724.chunk.js": "/goit-react-hw-08-phonebook/static/js/269.22e3a724.chunk.js",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.e81462ea.css.map": "/goit-react-hw-08-phonebook/static/css/main.e81462ea.css.map",
-    "main.2ddbe60f.js.map": "/goit-react-hw-08-phonebook/static/js/main.2ddbe60f.js.map",
+    "main.54cdb92b.js.map": "/goit-react-hw-08-phonebook/static/js/main.54cdb92b.js.map",
     "951.ad6463f0.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/951.ad6463f0.chunk.js.map",
-    "718.16081d99.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/718.16081d99.chunk.js.map",
+    "718.e7275d07.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/718.e7275d07.chunk.js.map",
     "250.f2230952.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/250.f2230952.chunk.js.map",
     "593.6858dfe3.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/593.6858dfe3.chunk.js.map",
     "732.3d6d7617.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/732.3d6d7617.chunk.js.map",
@@ -24,6 +24,6 @@
   },
   "entrypoints": [
     "static/css/main.e81462ea.css",
-    "static/js/main.2ddbe60f.js"
+    "static/js/main.54cdb92b.js"
   ]
 }
