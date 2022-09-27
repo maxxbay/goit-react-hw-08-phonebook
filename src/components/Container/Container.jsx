@@ -11,7 +11,7 @@ function Container({ children, title }) {
 }
 
 Container.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.object,
   title: PropTypes.string,
 };
 
