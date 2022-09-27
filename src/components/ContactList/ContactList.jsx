@@ -7,7 +7,7 @@ import { useGetContactsQuery } from 'redux/contacts/contact-api';
 import useFiltredContacts from 'hooks/useFiltredContacts';
 
 function ContactList() {
-  const { data: contacts, isFetching, error, refetch } = useGetContactsQuery();
+  const { data: contacts, isFetching, error } = useGetContactsQuery();
   const { filteredContactList } = useFiltredContacts();
 
   return (
