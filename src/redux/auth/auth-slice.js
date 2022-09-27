@@ -44,6 +44,7 @@ export const authSlice = createSlice({
 
     [operations.getCurrentUser.rejected](state) {
       state.isRefreshing = false;
+      state.isLoggedIn = false;
     },
 
     [operations.getCurrentUser.fulfilled](state, action) {
