@@ -5,7 +5,7 @@ export const Title = styled(Link)`
   display: block;
   font-size: 36px;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: 2px;
   color: var(--main-text-color);
   margin-bottom: 20px;

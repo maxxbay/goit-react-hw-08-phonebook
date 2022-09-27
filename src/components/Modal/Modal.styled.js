@@ -43,7 +43,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h2`
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 600;
   text-transform: uppercase;
   @media screen and (min-width: 768px) {
     font-size: 30px;
