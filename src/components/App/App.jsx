@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import useRefreshCurrentUser from 'hooks/useRefreshCurrentUser';
 import AppBar from 'components/AppBar';
 import NotFound from 'components/NotFound';
-// import PrivateRoute from 'components/PrivateRoute';
 import PublicRoute from 'components/PublicRoute';
 import Loader from 'components/Loader';
 import Footer from 'components/Footer';
@@ -34,16 +33,7 @@ function App() {
                   </PublicRoute>
                 }
               />
-              <Route
-                path="/contacts/*"
-                element={
-                  // <PrivateRoute
-                  // redirectTo="/contacts"
-
-                  <ContactsPage />
-                  // </PrivateRoute>
-                }
-              />
+              <Route path="/contacts/*" element={<ContactsPage />} />
               <Route
                 path="/contacts/add"
                 element={
