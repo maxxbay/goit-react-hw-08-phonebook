@@ -8,10 +8,10 @@ function PublicRoute({
   restricted = false,
   redirectTo = '/contacts',
 }) {
-  const isLoggedIn = useSelector(state => getIsLoggedIn(state));
+  const isLoggedIn = useSelector(getIsLoggedIn);
   const shouldRedirect = isLoggedIn && restricted;
 
-  return shouldRedirect ? <Navigate to={redirectTo} /> : children;
+  return shouldRedirect ? <Navigate to={redirectTo} replace /> : children;
 }
 
 PublicRoute.propTypes = {

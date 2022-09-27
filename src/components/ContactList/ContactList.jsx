@@ -4,15 +4,15 @@ import NotFound from 'components/NotFound';
 import { List, Item } from './ContactList.styled';
 import { useGetContactsQuery } from 'redux/contacts/contact-api';
 import useFiltredContacts from 'hooks/useFiltredContacts';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 function ContactList() {
   const { data: contacts, isFetching, error, refetch } = useGetContactsQuery();
   const { filteredContactList } = useFiltredContacts();
 
-  useEffect(() => {
-    refetch();
-  }, [refetch]);
+  // useEffect(() => {
+  //   refetch();
+  // }, [refetch]);
 
   return (
     <>
