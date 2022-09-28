@@ -10,7 +10,7 @@ function PrivateRoute({ children, redirectTo = '/' }) {
 }
 
 PrivateRoute.propTypes = {
-  children: propTypes.element,
+  // children: propTypes.element,
   redirectTo: propTypes.string,
 };
 
