@@ -1,12 +1,12 @@
 import propTypes from 'prop-types';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getIsLoggedIn } from 'redux/auth/auth-selectors';
 
 function PrivateRoute({ children, redirectTo = '/' }) {
   const isLoggedIn = useSelector(state => getIsLoggedIn(state));
 
-  return isLoggedIn ? children : <Navigate to={redirectTo} />;
+  return isLoggedIn ? <Outlet /> : <Navigate to={redirectTo} />;
 }
 
 PrivateRoute.propTypes = {

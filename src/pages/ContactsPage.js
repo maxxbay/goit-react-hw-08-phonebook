@@ -7,7 +7,7 @@ import AddButton from 'components/AddButton';
 
 function ContactsPage() {
   const { data: contacts } = useGetContactsQuery();
-
+  // console.log(contacts);
   return (
     <Container title="Contacts">
       <AddButton text="Add new contact" />

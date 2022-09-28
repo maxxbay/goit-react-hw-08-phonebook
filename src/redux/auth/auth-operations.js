@@ -61,7 +61,7 @@ const getCurrentUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
     const { data } = await axios.get('users/current');
     return data;
   } catch (error) {
-    console.log(error);
+    return thunkAPI.rejectWithValue(error.message);
   }
 });
 

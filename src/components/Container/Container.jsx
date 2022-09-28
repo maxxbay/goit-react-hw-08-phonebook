@@ -4,14 +4,15 @@ import { ContainerWrapper, Title } from './Container.styled';
 function Container({ children, title }) {
   return (
     <ContainerWrapper>
-      {title && <Title>{title}</Title>}
-      {children}
+      <>
+        {title && <Title>{title}</Title>}
+        {children}
+      </>
     </ContainerWrapper>
   );
 }
 
 Container.propTypes = {
-  children: PropTypes.object,
   title: PropTypes.string,
 };
 
