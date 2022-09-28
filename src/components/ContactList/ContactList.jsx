@@ -7,7 +7,7 @@ import useFiltredContacts from 'hooks/useFiltredContacts';
 // import { useEffect } from 'react';
 
 function ContactList() {
-  const { data: contacts, isFetching, error, refetch } = useGetContactsQuery();
+  const { data: contacts, isFetching, error } = useGetContactsQuery();
   const { filteredContactList } = useFiltredContacts();
 
   // useEffect(() => {
