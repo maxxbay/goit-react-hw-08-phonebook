@@ -19,14 +19,14 @@ function useCreateNewContact(data) {
           'This user is already in the contact list.',
           'OK'
         )
+      : contacts.some(contact => contact.name !== data.name)
+      ? createContact(data) &&
+        Notify.success(`The ${data.name} has been added to your contact list.`)
       : createContact(data);
 
     navigate('/contacts');
-
-    Notify.success(`The ${data.name} has been added to your contact list.`);
   };
 
   return onSubmitForm;
 }
-
 export default useCreateNewContact;
