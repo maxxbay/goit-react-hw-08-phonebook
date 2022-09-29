@@ -4,6 +4,7 @@ import useRefreshCurrentUser from 'hooks/useRefreshCurrentUser';
 import AppBar from 'components/AppBar';
 import NotFound from 'components/NotFound';
 import PublicRoute from 'components/PublicRoute';
+import PrivateRoute from 'components/PrivateRoute';
 import Loader from 'components/Loader';
 import Footer from 'components/Footer';
 
@@ -33,7 +34,14 @@ function App() {
                   </PublicRoute>
                 }
               />
-              <Route path="/contacts/*" element={<ContactsPage />} />
+              <Route
+                path="/contacts/*"
+                element={
+                  // <PrivateRoute redirectTo="/contacts">
+                  <ContactsPage />
+                  // </PrivateRoute>
+                }
+              />
               <Route
                 path="/contacts/add"
                 element={

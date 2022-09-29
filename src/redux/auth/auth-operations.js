@@ -21,7 +21,7 @@ const registerUser = createAsyncThunk('auth/register', async user => {
     token.set(data.token);
     return data;
   } catch (error) {
-    Report.warning('Email or password entered incorrectly.', 'Try again!');
+    Report.warning('Data entered incorrectly.', 'Try again!');
   }
 });
 

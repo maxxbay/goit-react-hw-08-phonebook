@@ -15,7 +15,7 @@ function PublicRoute({
 }
 
 PublicRoute.propTypes = {
-  // children: propTypes.element,
+  children: propTypes.element,
   restricted: propTypes.bool,
   redirectTo: propTypes.string,
 };

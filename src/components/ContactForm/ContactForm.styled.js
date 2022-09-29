@@ -4,7 +4,7 @@ import { Field } from 'formik';
 export const TitlePage = styled.h2`
   margin-bottom: 30px;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 600;
 `;
 
 export const Label = styled.label`
